@@ -14,35 +14,42 @@ Eventually want integration for notifications to devices, etc.
 Usage
 -----
 If not passed any arguments, starts an interactive session. Otherwise:
--m --must <item>	Add a new item with high prority
--s --should <item>	Add a new item with medium prority
--w --want <item>	Add a new item with low prority
--f --finished <item>	Mark an item as done
--l --list		List the list
+<pre>
+-m --must <item>         Add a new item with high prority
+-s --should <item>       Add a new item with medium prority
+-w --want <item>         Add a new item with low prority
+-f --finished <item>     Mark an item as done
+-l --list          List the list
+</pre>
 
 Addtional interactive-mode-only commands
--q --quit		Quit, saving changes
-   --discard		Quit, discarding changes
-   --swap <a> <b>	Swap two items
-   --restore-previous   Swap current list with backup
+<pre>
+   --swap                Swap two items (still working on format)
+-q --quit                Quit, saving changes
+   --discard             Quit, discarding changes
+   --restore-previous    Swap current list with backup
+</pre>
 
 Interactive session repeatedly accepts commands in the above form, without dashes.
- > Indicates user input and should not be entered
- < Indicates computer output and will not be printed
+<pre>
+ &gt; Indicates user input and should not be entered
+ &lt; Indicates computer output and will not be printed
+</pre>
 
 Example interactive todo session
 --------------------------------
+<pre>
 ~$ todo
->must Fix seg fault bug in partition program
->w Better keyboard
->should Get car fixed
->list
-<1) Fix seg fault bug in partition program
-<2) Get car fixed
-<3) Better keyboard
->q
+&gt;must Fix seg fault bug in partition program
+&gt;w Better keyboard
+&gt;should Get car fixed
+&gt;list
+&lt;1) Fix seg fault bug in partition program
+&lt;2) Get car fixed
+&lt;3) Better keyboard
+&lt;q
 ~$
-
+</pre>
 Potential features
 ------------------
 Named lists
